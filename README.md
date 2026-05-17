@@ -79,3 +79,27 @@ A step-by-step guide to provisioning an Ubuntu 22.04 virtual machine, deploying 
 | Server name | `wazuh-server` |
 | Username | `<your username>` |
 | Password | `<strong password>` |
+## 
+
+- ✅**SSH SETUP:** Check **Install OpenSSH server** — required for PuTTY access  
+- **Featured Snaps:** Skip (press Done)
+
+### Steps:
+1. Wait for the installation to complete, then select **Reboot Now**.  
+2. When prompted, remove the ISO:  
+   **Devices → Optical Drives → Remove disk from virtual drive**, then press **Enter**.
+# Part 2 — Initial Ubuntu Configuration
+
+After the VM reboots, log in with your credentials and run the following commands.
+
+---
+
+## 2.1 Update the System
+
+```bash
+sudo apt update && sudo apt upgrade -y
+ip a
+192.168.x.x
+sudo systemctl status ssh
+active (running)
+sudo systemctl enable --now ssh
